@@ -1,0 +1,472 @@
+[
+  {
+    "file": "Kaado/AMAGUMO.png",
+    "word": "AMAGUMO",
+    "kana": "あ"
+  },
+  {
+    "file": "Kaado/AME.png",
+    "word": "AME",
+    "kana": "あ"
+  },
+  {
+    "file": "Kaado/CHIKYUU.png",
+    "word": "CHIKYUU",
+    "kana": "ち"
+  },
+  {
+    "file": "Kaado/EKI.png",
+    "word": "EKI",
+    "kana": "え"
+  },
+  {
+    "file": "Kaado/FUNE.png",
+    "word": "FUNE",
+    "kana": "ふ"
+  },
+  {
+    "file": "Kaado/FUNE2.png",
+    "word": "FUNE2",
+    "kana": "ふ"
+  },
+  {
+    "file": "Kaado/FUNE3.png",
+    "word": "FUNE3",
+    "kana": "ふ"
+  },
+  {
+    "file": "Kaado/HANA.png",
+    "word": "HANA",
+    "kana": "は"
+  },
+  {
+    "file": "Kaado/HEBI.png",
+    "word": "HEBI",
+    "kana": "へ"
+  },
+  {
+    "file": "Kaado/HIKOUKI.png",
+    "word": "HIKOUKI",
+    "kana": "ひ"
+  },
+  {
+    "file": "Kaado/HON.png",
+    "word": "HON",
+    "kana": "ほ"
+  },
+  {
+    "file": "Kaado/HON2.png",
+    "word": "HON2",
+    "kana": "ほ"
+  },
+  {
+    "file": "Kaado/HOSHI.png",
+    "word": "HOSHI",
+    "kana": "ほ"
+  },
+  {
+    "file": "Kaado/HOSHI2.png",
+    "word": "HOSHI2",
+    "kana": "ほ"
+  },
+  {
+    "file": "Kaado/IE.png",
+    "word": "IE",
+    "kana": "い"
+  },
+  {
+    "file": "Kaado/KAGI.png",
+    "word": "KAGI",
+    "kana": "か"
+  },
+  {
+    "file": "Kaado/KE-KI.png",
+    "word": "KE-KI",
+    "kana": "け"
+  },
+  {
+    "file": "Kaado/KI.png",
+    "word": "KI",
+    "kana": "き"
+  },
+  {
+    "file": "Kaado/KOORI.png",
+    "word": "KOORI",
+    "kana": "こ"
+  },
+  {
+    "file": "Kaado/KURUMA.png",
+    "word": "KURUMA",
+    "kana": "く"
+  },
+  {
+    "file": "Kaado/MACHI.png",
+    "word": "MACHI",
+    "kana": "ま"
+  },
+  {
+    "file": "Kaado/MACHI2.png",
+    "word": "MACHI2",
+    "kana": "ま"
+  },
+  {
+    "file": "Kaado/MEGANE.png",
+    "word": "MEGANE",
+    "kana": "め"
+  },
+  {
+    "file": "Kaado/MIKAN.png",
+    "word": "MIKAN",
+    "kana": "み"
+  },
+  {
+    "file": "Kaado/MIKAN2.png",
+    "word": "MIKAN2",
+    "kana": "み"
+  },
+  {
+    "file": "Kaado/MIZU.png",
+    "word": "MIZU",
+    "kana": "み"
+  },
+  {
+    "file": "Kaado/MIZU２.png",
+    "word": "MIZU２",
+    "kana": "み"
+  },
+  {
+    "file": "Kaado/MORI.png",
+    "word": "MORI",
+    "kana": "も"
+  },
+  {
+    "file": "Kaado/MUSHI.png",
+    "word": "MUSHI",
+    "kana": "む"
+  },
+  {
+    "file": "Kaado/MUSHI2.png",
+    "word": "MUSHI2",
+    "kana": "む"
+  },
+  {
+    "file": "Kaado/MUSHI3.png",
+    "word": "MUSHI3",
+    "kana": "む"
+  },
+  {
+    "file": "Kaado/MUSHI4.png",
+    "word": "MUSHI4",
+    "kana": "む"
+  },
+  {
+    "file": "Kaado/MUSHI5.png",
+    "word": "MUSHI5",
+    "kana": "む"
+  },
+  {
+    "file": "Kaado/N.png",
+    "word": "N",
+    "kana": "ん"
+  },
+  {
+    "file": "Kaado/N2.png",
+    "word": "N2",
+    "kana": "ん"
+  },
+  {
+    "file": "Kaado/NAIFU.png",
+    "word": "NAIFU",
+    "kana": "な"
+  },
+  {
+    "file": "Kaado/NEKO.png",
+    "word": "NEKO",
+    "kana": "ね"
+  },
+  {
+    "file": "Kaado/NEKO2.png",
+    "word": "NEKO2",
+    "kana": "ね"
+  },
+  {
+    "file": "Kaado/NIKU.png",
+    "word": "NIKU",
+    "kana": "に"
+  },
+  {
+    "file": "Kaado/NINJIN.png",
+    "word": "NINJIN",
+    "kana": "に"
+  },
+  {
+    "file": "Kaado/NOUKA.png",
+    "word": "NOUKA",
+    "kana": "の"
+  },
+  {
+    "file": "Kaado/NOUKA2.png",
+    "word": "NOUKA2",
+    "kana": "の"
+  },
+  {
+    "file": "Kaado/NUNO.png",
+    "word": "NUNO",
+    "kana": "ぬ"
+  },
+  {
+    "file": "Kaado/ONGAKU.png",
+    "word": "ONGAKU",
+    "kana": "お"
+  },
+  {
+    "file": "Kaado/RAJIO.png",
+    "word": "RAJIO",
+    "kana": "ら"
+  },
+  {
+    "file": "Kaado/RAJIO2.png",
+    "word": "RAJIO2",
+    "kana": "ら"
+  },
+  {
+    "file": "Kaado/RAJIO3.png",
+    "word": "RAJIO3",
+    "kana": "ら"
+  },
+  {
+    "file": "Kaado/REMON.png",
+    "word": "REMON",
+    "kana": "れ"
+  },
+  {
+    "file": "Kaado/REMON2.png",
+    "word": "REMON2",
+    "kana": "れ"
+  },
+  {
+    "file": "Kaado/REMONE-DO.png",
+    "word": "REMONE-DO",
+    "kana": "れ"
+  },
+  {
+    "file": "Kaado/RINGO.png",
+    "word": "RINGO",
+    "kana": "り"
+  },
+  {
+    "file": "Kaado/RO-KA.png",
+    "word": "RO-KA",
+    "kana": "ろ"
+  },
+  {
+    "file": "Kaado/RO-PU.png",
+    "word": "RO-PU",
+    "kana": "ろ"
+  },
+  {
+    "file": "Kaado/RO-PUMAN www.png",
+    "word": "RO-PUMAN WWW",
+    "kana": "ろ"
+  },
+  {
+    "file": "Kaado/RO-PUMAN2 www.png",
+    "word": "RO-PUMAN2 WWW",
+    "kana": "ろ"
+  },
+  {
+    "file": "Kaado/RU-RU.png",
+    "word": "RU-RU",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/RU-RU2.png",
+    "word": "RU-RU2",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/RU-RU3.2.png",
+    "word": "RU-RU3.2",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/RU-RU3.png",
+    "word": "RU-RU3",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/RU-RU4.png",
+    "word": "RU-RU4",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/RU-RU5.png",
+    "word": "RU-RU5",
+    "kana": "る"
+  },
+  {
+    "file": "Kaado/SAKANA.png",
+    "word": "SAKANA",
+    "kana": "さ"
+  },
+  {
+    "file": "Kaado/SENSEI.png",
+    "word": "SENSEI",
+    "kana": "せ"
+  },
+  {
+    "file": "Kaado/SENSEI2.png",
+    "word": "SENSEI2",
+    "kana": "せ"
+  },
+  {
+    "file": "Kaado/SENSEI3.png",
+    "word": "SENSEI3",
+    "kana": "せ"
+  },
+  {
+    "file": "Kaado/SHINBUN.png",
+    "word": "SHINBUN",
+    "kana": "し"
+  },
+  {
+    "file": "Kaado/SOUJI.png",
+    "word": "SOUJI",
+    "kana": "そ"
+  },
+  {
+    "file": "Kaado/SOUJI2.png",
+    "word": "SOUJI2",
+    "kana": "そ"
+  },
+  {
+    "file": "Kaado/SUSHI.png",
+    "word": "SUSHI",
+    "kana": "す"
+  },
+  {
+    "file": "Kaado/TAKARA.png",
+    "word": "TAKARA",
+    "kana": "た"
+  },
+  {
+    "file": "Kaado/TAMAGO.png",
+    "word": "TAMAGO",
+    "kana": "た"
+  },
+  {
+    "file": "Kaado/TE.png",
+    "word": "TE",
+    "kana": "て"
+  },
+  {
+    "file": "Kaado/TEREBI.png",
+    "word": "TEREBI",
+    "kana": "て"
+  },
+  {
+    "file": "Kaado/TEREBI2.png",
+    "word": "TEREBI2",
+    "kana": "て"
+  },
+  {
+    "file": "Kaado/TOIRE.png",
+    "word": "TOIRE",
+    "kana": "と"
+  },
+  {
+    "file": "Kaado/TOMATO.png",
+    "word": "TOMATO",
+    "kana": "と"
+  },
+  {
+    "file": "Kaado/TORI.png",
+    "word": "TORI",
+    "kana": "と"
+  },
+  {
+    "file": "Kaado/TORI2.png",
+    "word": "TORI2",
+    "kana": "と"
+  },
+  {
+    "file": "Kaado/TSUKI.png",
+    "word": "TSUKI",
+    "kana": "つ"
+  },
+  {
+    "file": "Kaado/TSUKI1.2.png",
+    "word": "TSUKI1.2",
+    "kana": "つ"
+  },
+  {
+    "file": "Kaado/TSUKI2.2.png",
+    "word": "TSUKI2.2",
+    "kana": "つ"
+  },
+  {
+    "file": "Kaado/TSUKI2.png",
+    "word": "TSUKI2",
+    "kana": "つ"
+  },
+  {
+    "file": "Kaado/USAGI.png",
+    "word": "USAGI",
+    "kana": "う"
+  },
+  {
+    "file": "Kaado/WAIN.png",
+    "word": "WAIN",
+    "kana": "わ"
+  },
+  {
+    "file": "Kaado/WO.png",
+    "word": "WO",
+    "kana": "を"
+  },
+  {
+    "file": "Kaado/YAMA.png",
+    "word": "YAMA",
+    "kana": "や"
+  },
+  {
+    "file": "Kaado/YAMA2.png",
+    "word": "YAMA2",
+    "kana": "や"
+  },
+  {
+    "file": "Kaado/YOGA.png",
+    "word": "YOGA",
+    "kana": "よ"
+  },
+  {
+    "file": "Kaado/YOGA2.png",
+    "word": "YOGA2",
+    "kana": "よ"
+  },
+  {
+    "file": "Kaado/YUKI.png",
+    "word": "YUKI",
+    "kana": "ゆ"
+  },
+  {
+    "file": "Kaado/YUKI2.2.png",
+    "word": "YUKI2.2",
+    "kana": "ゆ"
+  },
+  {
+    "file": "Kaado/YUKI2.png",
+    "word": "YUKI2",
+    "kana": "ゆ"
+  },
+  {
+    "file": "Kaado/YUKI3.2.png",
+    "word": "YUKI3.2",
+    "kana": "ゆ"
+  },
+  {
+    "file": "Kaado/YUKI3.png",
+    "word": "YUKI3",
+    "kana": "ゆ"
+  }
+]

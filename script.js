@@ -1,16 +1,29 @@
+let cardData = [];
 
-const cardData = [
-    { file: "AME.png", word: "AME", kana: "あ" },
-    { file: "IE.png", word: "IE", kana: "い" },
-    { file: "INU.png", word: "INU", kana: "い" },
-    { file: "UTA.png", word: "UTA", kana: "う" },
-    { file: "EKI.png", word: "EKI", kana: "え" },
-    { file: "ONI.png", word: "ONI", kana: "お" },
-    { file: "NEKO.png", word: "NEKO", kana: "ね" },
-    { file: "SAKURA.png", word: "SAKURA", kana: "さ" },
-    { file: "KUMA.png", word: "KUMA", kana: "く" },
-    { file: "RINGO.png", word: "RINGO", kana: "り" }
-];
+async function loadCards() {
+    try {
+        const response = await fetch("./cards.json");
+
+        if (!response.ok) {
+            throw new Error("Could not load cards.json");
+        }
+
+        cardData = await response.json();
+
+        if (cardData.length < 5) {
+            throw new Error("You need at least 5 PNG images.");
+        }
+
+        startRound();
+    } catch (error) {
+        console.error("Failed to load cards:", error);
+
+        document.getElementById("feedback").textContent =
+            "Could not load cards. Check the console.";
+    }
+}
+
+loadCards();
 
 let targetKana = "";
 let score = 0;
@@ -71,7 +84,7 @@ function renderCards(cards) {
         card.classList.add("game-card");
 
         const image = document.createElement("img");
-        image.src = `images/${cardData.file}`;
+        image.src = cardData.file;
         image.alt = cardData.word;
 
         const label = document.createElement("span");
