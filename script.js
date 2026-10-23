@@ -1,127 +1,120 @@
 
-const cards = [
-    "🍎", "🍎",
-    "🚀", "🚀",
-    "🐱", "🐱",
-    "⚽", "⚽",
-    "🌙", "🌙",
-    "🎵", "🎵"
+const cardData = [
+    { file: "AME.png", word: "AME", kana: "あ" },
+    { file: "IE.png", word: "IE", kana: "い" },
+    { file: "INU.png", word: "INU", kana: "い" },
+    { file: "UTA.png", word: "UTA", kana: "う" },
+    { file: "EKI.png", word: "EKI", kana: "え" },
+    { file: "ONI.png", word: "ONI", kana: "お" },
+    { file: "NEKO.png", word: "NEKO", kana: "ね" },
+    { file: "SAKURA.png", word: "SAKURA", kana: "さ" },
+    { file: "KUMA.png", word: "KUMA", kana: "く" },
+    { file: "RINGO.png", word: "RINGO", kana: "り" }
 ];
 
-let firstCard = null;
-let secondCard = null;
-let lockBoard = false;
-let moves = 0;
-let matchedPairs = 0;
+let targetKana = "";
+let score = 0;
+let round = 0;
+let answered = false;
 
-// Shuffle the cards randomly
-function shuffleCards() {
-    cards.sort(() => Math.random() - 0.5);
+const CARDS_PER_ROUND = 5;
+
+// Shuffle an array
+function shuffle(array) {
+    return [...array].sort(() => Math.random() - 0.5);
 }
 
-// Create the game board
-function createBoard() {
-    const gameBoard = document.getElementById("game-board");
+// Start a new round
+function startRound() {
+    answered = false;
+    round++;
 
-    gameBoard.innerHTML = "";
+    document.getElementById("feedback").textContent = "";
+    document.getElementById("next-button").hidden = true;
 
-    shuffleCards();
+    // Pick a random target hiragana
+    const randomCard =
+        cardData[Math.floor(Math.random() * cardData.length)];
 
-    cards.forEach((symbol) => {
+    targetKana = randomCard.kana;
+
+    document.getElementById("target-kana").textContent =
+        targetKana;
+
+    // Get all cards that match the target sound
+    const correctCards = cardData.filter(
+        card => card.kana === targetKana
+    );
+
+    // Pick one correct card
+    const correctCard =
+        correctCards[Math.floor(Math.random() * correctCards.length)];
+
+    // Pick four other cards with different starting sounds
+    const wrongCards = shuffle(
+        cardData.filter(card => card.kana !== targetKana)
+    ).slice(0, CARDS_PER_ROUND - 1);
+
+    // Combine and shuffle the five choices
+    const roundCards = shuffle([correctCard, ...wrongCards]);
+
+    renderCards(roundCards);
+}
+
+// Display the five cards
+function renderCards(cards) {
+    const board = document.getElementById("game-board");
+    board.innerHTML = "";
+
+    cards.forEach(cardData => {
         const card = document.createElement("button");
+        card.classList.add("game-card");
 
-        card.classList.add("card");
-        card.textContent = "?";
-        card.dataset.symbol = symbol;
+        const image = document.createElement("img");
+        image.src = `images/${cardData.file}`;
+        image.alt = cardData.word;
 
-        card.addEventListener("click", () => flipCard(card));
+        const label = document.createElement("span");
+        label.textContent = cardData.word;
 
-        gameBoard.appendChild(card);
+        card.append(image, label);
+
+        card.addEventListener("click", () => {
+            checkAnswer(card, cardData);
+        });
+
+        board.appendChild(card);
     });
 }
 
-// Flip a card
-function flipCard(card) {
-    if (lockBoard) return;
-    if (card === firstCard) return;
-    if (card.classList.contains("matched")) return;
-    if (card.classList.contains("flipped")) return;
+// Check the selected card
+function checkAnswer(card, selectedCard) {
+    if (answered) return;
 
-    card.textContent = card.dataset.symbol;
-    card.classList.add("flipped");
+    if (selectedCard.kana === targetKana) {
+        answered = true;
+        score++;
 
-    if (firstCard === null) {
-        firstCard = card;
-        return;
-    }
+        card.classList.add("correct");
 
-    secondCard = card;
-    moves++;
+        document.getElementById("feedback").textContent =
+            "Correct! よくできました！";
 
-    updateMoves();
-    checkMatch();
-}
-
-// Check whether the two cards match
-function checkMatch() {
-    if (
-        firstCard.dataset.symbol ===
-        secondCard.dataset.symbol
-    ) {
-        firstCard.classList.add("matched");
-        secondCard.classList.add("matched");
-
-        matchedPairs++;
-        resetTurn();
-        checkWin();
+        document.getElementById("score").textContent = score;
+        document.getElementById("next-button").hidden = false;
     } else {
-        lockBoard = true;
+        card.classList.add("wrong");
 
-        setTimeout(() => {
-            firstCard.textContent = "?";
-            secondCard.textContent = "?";
-
-            firstCard.classList.remove("flipped");
-            secondCard.classList.remove("flipped");
-
-            resetTurn();
-        }, 1000);
+        document.getElementById("feedback").textContent =
+            "Not quite! Try another card.";
     }
 }
 
-// Reset the current turn
-function resetTurn() {
-    firstCard = null;
-    secondCard = null;
-    lockBoard = false;
-}
+// Start the next round
+document.getElementById("next-button").addEventListener(
+    "click",
+    startRound
+);
 
-// Update the move counter
-function updateMoves() {
-    document.getElementById("moves").textContent = moves;
-}
-
-// Check whether all pairs have been found
-function checkWin() {
-    if (matchedPairs === cards.length / 2) {
-        document.getElementById("message").textContent =
-            `You won in ${moves} moves!`;
-    }
-}
-
-// Start or restart the game
-function startGame() {
-    firstCard = null;
-    secondCard = null;
-    lockBoard = false;
-    moves = 0;
-    matchedPairs = 0;
-
-    document.getElementById("moves").textContent = moves;
-    document.getElementById("message").textContent = "";
-
-    createBoard();
-}
-
-// Start the game when the page loads
-startGame();
+// Start the game
+startRound();

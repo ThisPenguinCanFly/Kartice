@@ -1,23 +1,15 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Matching Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Card Matching Game</h1>
+<h1>Hiragana Match</h1>
 
-    <p>Moves: <span id="moves">0</span></p>
+<p>Score: <span id="score">0</span></p>
 
-    <div id="game-board"></div>
+<h2>Find the card that starts with:</h2>
+<div id="target-kana"></div>
 
-    <p id="message"></p>
+<div id="game-board"></div>
 
-    <button onclick="startGame()">Restart Game</button>
+<p id="feedback" aria-live="polite"></p>
 
-    <script src="script.js"></script>
-</body>
-</html>
+<button id="next-button" hidden>Next Round</button>
+
+<script src="script.js"></script>
