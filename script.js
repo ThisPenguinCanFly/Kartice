@@ -29,6 +29,7 @@ let targetKana = "";
 let score = 0;
 let round = 0;
 let answered = false;
+let failed = false;
 
 const CARDS_PER_ROUND = 5;
 
@@ -92,7 +93,7 @@ function renderCards(cards) {
         image.style.objectFit = "contain";
 
         const label = document.createElement("span");
-        label.textContent = cardData.word;
+        //label.textContent = cardData.word;
 
         card.append(image, label);
 
@@ -108,9 +109,13 @@ function renderCards(cards) {
 function checkAnswer(card, selectedCard) {
     if (answered) return;
 
-    if (selectedCard.kana === targetKana) {
+    if (selectedCard.kana === targetKana) { /*! pomeni "not"*/
         answered = true;
-        score++;
+        if (!failed) {
+            score++; /*score = score + 1*/
+        } else {
+            failed = false;
+        }
 
         card.classList.add("correct");
 
@@ -124,6 +129,8 @@ function checkAnswer(card, selectedCard) {
 
         document.getElementById("feedback").textContent =
             "Not quite! Try another card.";
+        
+            failed = true;
     }
 }
 
