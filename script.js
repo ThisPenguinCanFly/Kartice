@@ -87,6 +87,10 @@ function renderCards(cards) {
         image.src = cardData.file;
         image.alt = cardData.word;
 
+        image.style.width = "100%";
+        image.style.height = "115px";
+        image.style.objectFit = "contain";
+
         const label = document.createElement("span");
         label.textContent = cardData.word;
 
@@ -128,6 +132,3 @@ document.getElementById("next-button").addEventListener(
     "click",
     startRound
 );
-
-// Start the game
-startRound();
